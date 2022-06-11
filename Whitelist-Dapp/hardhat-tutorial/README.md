@@ -1,5 +1,7 @@
 # Whitelist App Contracts
 
+Original whitelist contract address on the Rinkeby test network: `0xFDeb7c2da8126195745010eA95e2210DEF9467af`.
+
 ## Deploying
 
 Make sure you have a `.env` file in the root of this project with the following content:
