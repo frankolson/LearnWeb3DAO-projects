@@ -1,15 +1,19 @@
-# Basic Sample Hardhat Project
+# NFT Collection App Contracts
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Original Crypto Devs contract address on the Rinkeby test network: `0xB2eec335a5228BeFEa9fdA5667E1469307F01d46`.
 
-Try running some of the following tasks:
+## Deploying
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+Make sure you have a `.env` file in the root of this project with the following content:
+
+```
+// Go to https://www.alchemyapi.io, sign up, create
+// a new App in its dashboard and select the network as Rinkeby, and replace "add-the-alchemy-key-url-here" with its key url
+ALCHEMY_API_KEY_URL="add-the-alchemy-key-url-here"
+
+// Replace this private key with your RINKEBY account private key
+// To export your private key from Metamask, open Metamask and
+// go to Account Details > Export Private Key
+// Be aware of NEVER putting real Ether into testing accounts
+RINKEBY_PRIVATE_KEY="add-the-rinkeby-private-key-here"
 ```
