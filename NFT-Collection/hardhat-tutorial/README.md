@@ -1,6 +1,6 @@
 # NFT Collection App Contracts
 
-Original Crypto Devs contract address on the Rinkeby test network: `0xB2eec335a5228BeFEa9fdA5667E1469307F01d46`.
+Crypto Devs contract address on the Rinkeby test network: `0x413e8ff02E6DCF3568715FA858f302F3746BE23D`.
 
 ## Deploying
 
