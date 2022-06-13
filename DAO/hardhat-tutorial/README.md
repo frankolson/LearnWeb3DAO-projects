@@ -1,7 +1,7 @@
 # DAO App Contracts
 
-Fake NFT Marketplace contract address on the Rinkeby test network: `0xA6Ea35b9DFff7D3Ff8d40cc063B4B747AbacD420`.
-DAO contract address on the Rinkeby test network: `0x994732Fba0277F0c67E49EF43b3244e04C2dE38E`.
+- Fake NFT Marketplace contract address on the Rinkeby test network: `0xA6Ea35b9DFff7D3Ff8d40cc063B4B747AbacD420`.
+- DAO contract address on the Rinkeby test network: `0x994732Fba0277F0c67E49EF43b3244e04C2dE38E`.
 
 ## Deploying
 
