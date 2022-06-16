@@ -64,4 +64,63 @@ contract Exchange is ERC20 {
         
         return(ethAmount, cryptoDevTokenAmount);
     }
+
+    /**
+    * @dev Returns the amount Eth/Crypto Dev tokens that would be returned to the user
+    * in the swap
+    */
+    function getAmountOfTokens(
+        uint256 inputAmount,
+        uint256 inputReserve,
+        uint256 outputReserve
+    ) public pure returns (uint256) {
+        require(inputReserve > 0 && outputReserve > 0, "invalid reserves");
+        uint256 inputAmountWithFees = inputAmount * 99;
+
+        /**
+        * inputAmountWithFees cannot be divided by 100 to be made into a
+        * percentage for the same reason numerator and denominator need to be
+        * defined separately. We are avoiding floating point math because it is
+        * not supported in solidity. The '100' from the first scenario was
+        * eventually added into the denominator.
+        */
+        uint256 numerator = outputReserve * inputAmountWithFees;
+        uint256 denominator = inputReserve * inputAmountWithFees * 100;
+        return numerator / denominator;
+    }
+
+    /** 
+    * @dev Swaps Eth for CryptoDev Tokens
+    */
+    function ethToCryptoDevToken(uint _minTokens) public payable {
+        uint256 tokenReserve = getReserve();
+        uint256 tokensBought = getAmountOfTokens(
+            msg.value,
+            address(this).balance - msg.value,
+            tokenReserve
+        );
+
+        require(tokensBought >= _minTokens, "insufficient output amount");
+        ERC20(cryptoDevTokenAddress).transfer(msg.sender, tokensBought);
+    }
+
+    /** 
+    * @dev Swaps CryptoDev Tokens for Eth
+    */
+    function cryptoDevTokenToEth(uint256 _tokensSold, uint _minEth) public {
+        uint256 tokenReserve = getReserve();
+        uint256 ethBought = getAmountOfTokens(
+            _tokensSold,
+            tokenReserve,
+            address(this).balance
+        );
+
+        require(ethBought >= _minEth, "insufficient output amount");
+        ERC20(cryptoDevTokenAddress).transferFrom(
+            msg.sender,
+            address(this),
+            _tokensSold
+        );
+        payable(msg.sender).transfer(ethBought);
+    }
 }
