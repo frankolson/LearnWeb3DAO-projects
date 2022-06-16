@@ -5,4 +5,4 @@ Monorepo for my LearnWeb3DAO projects
 - [Whitelist Dapp](https://github.com/frankolson/LearnWeb3DAO-projects/tree/main/Whitelist-Dapp)
 - [NFT Collection Dapp](https://github.com/frankolson/LearnWeb3DAO-projects/tree/main/NFT-Collection)
 - [ICO Dapp](https://github.com/frankolson/LearnWeb3DAO-projects/tree/main/ICO)
-- [DAO Dapp](https://github.com/frankolson/LearnWeb3DAO-projects/tree/main/DAO)
+- [DEX Dapp](https://github.com/frankolson/LearnWeb3DAO-projects/tree/main/DeFi-Exchange)
