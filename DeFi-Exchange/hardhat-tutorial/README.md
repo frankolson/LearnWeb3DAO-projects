@@ -1,6 +1,6 @@
 # DEX App Contracts
 
-DEX contract address on the Rinkeby test network: `0x2716f3e8bcd224F5F12A505d63625a01139b1fA7`.
+DEX contract address on the Rinkeby test network: `0x97906840Df9ce58166fad8DF8CD41eD18807B145`.
 
 ## Deploying
 
