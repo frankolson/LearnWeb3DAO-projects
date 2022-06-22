@@ -1,6 +1,6 @@
 # ICO App Contracts
 
-Crypto Devs contract address on the Rinkeby test network: `0x5F56a019D584c872faDcf9391176e88172765c61`.
+Crypto Devs contract address, listed as "Crypto Dev Token (CD)", on the Rinkeby test network: `0x5F56a019D584c872faDcf9391176e88172765c61`.
 
 ## Deploying
 
